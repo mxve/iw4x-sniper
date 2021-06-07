@@ -708,15 +708,16 @@ doDvars()
 		self takeweapon("specialty_scrambler");
 		
 		weapon = self getCurrentWeapon();
-		self clearPerks();
+		//self clearPerks();
 		
-		self maps\mp\perks\_perks::givePerk("specialty_marathon"); // Marathon 
-		self maps\mp\perks\_perks::givePerk("specialty_fastmantle"); // Marathon Pro
-		self maps\mp\perks\_perks::givePerk("specialty_fastreload"); // Sleight of Hand
-		self maps\mp\perks\_perks::givePerk("specialty_quickdraw"); // Sleight of Hand Pro
+		//self maps\mp\perks\_perks::givePerk("specialty_marathon"); // Marathon 
+		//self maps\mp\perks\_perks::givePerk("specialty_fastmantle"); // Marathon Pro
+		//self maps\mp\perks\_perks::givePerk("specialty_fastreload"); // Sleight of Hand
+		//self maps\mp\perks\_perks::givePerk("specialty_quickdraw"); // Sleight of Hand Pro
 		
-		self maps\mp\perks\_perks::givePerk("specialty_lightweight"); // Lightweight
-		self maps\mp\perks\_perks::givePerk("specialty_fastsprintrecovery"); // Lightweight Pro
+		//self maps\mp\perks\_perks::givePerk("specialty_lightweight"); // Lightweight
+		//self maps\mp\perks\_perks::givePerk("specialty_fastsprintrecovery"); // Lightweight Pro
+
 		//self maps\mp\perks\_perks::givePerk("specialty_heartbreaker"); // Ninja
 		//self maps\mp\perks\_perks::givePerk("specialty_quieter"); // Ninja Pro
 		
@@ -744,29 +745,37 @@ GiveAmmo()
 {
 	for(;;)
 	{
-	self waittill("weapon_fired");
-	weapon1=self getCurrentWeapon();
-	self giveMaxAmmo(weapon1);
-	
+		self waittill("weapon_fired");
+		weapon1=self getCurrentWeapon();
+		self giveMaxAmmo(weapon1);
 	}
 }
 
 serverHUD()
 {
     info = level createServerFontString("objective", 0.85);
-	info setPoint("TOPRIGHT", "TOPRIGHT", -8, 0);
-	info.glowalpha = .5;
+	info setPoint("TOPRIGHT", "TOPRIGHT", -4, 0);
+	info.glowalpha = .6;
 	info.glowcolor = ( 0, 1, 0 );
-	info setText("Made by Sunbae");
+	info setText("mxve");
 	info.hideWhenInMenu = true;
+
+	while (1)
+	{
+		info.glowcolor = ( .4, .3, 1 );
+		info setText("mxve");
+		wait 20;
+		info.glowcolor = ( 0, 1, 0 );
+		info setText("Sniper Mod by Sunbae");
+		wait 8;
+		info.glowcolor = ( 1, 0, 0 );
+		info setText("FPSBoost by Dizzy");
+		wait 8;
+	}
 }
 giveTK()
 {		
 		
 		self maps\mp\perks\_perks::givePerk("throwingknife_mp");
 		self giveweapon("throwingknife_mp");
-		
-		
-		
-
 }
