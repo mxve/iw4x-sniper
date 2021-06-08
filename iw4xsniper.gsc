@@ -97,7 +97,7 @@ restrictWeapons()
 
 	// Check for weapon attachments and allowed weapons
 	if (	
-			weapon!= self.secondaryWeapon &&
+			weapon != self.secondaryWeapon &&
 		   	(
 				isSubStr(weapon, "thermal") ||
 		   		isSubStr(weapon, "heartbeat") ||
@@ -157,7 +157,7 @@ takeAmmo(slot)
 /*
  *	dvars()
  *
- *	Set required dvars
+ *		Set required dvars
  */
 dvars()
 {
