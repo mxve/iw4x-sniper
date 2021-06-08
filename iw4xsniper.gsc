@@ -92,12 +92,7 @@ doDvars()
 					isSubStr(weapon,"riotshield") ||
 					!(
 						isSubStr(weapon,"cheytac") ||
-						isSubStr(weapon,"l96a1") ||
-						isSubStr(weapon,"dsr") ||
-						isSubStr(weapon,"msr") ||
-						isSubStr(weapon,"l118a") ||
-						isSubStr(weapon,"awp") ||
-						isSubStr(weapon,"ballista") ||
+						isSubStr(weapon,"barrett") ||
 						isSubStr(weapon,"m40a3") ||
 						isSubStr(weapon,"throwingknife")
 					)
@@ -133,7 +128,7 @@ giveAmmo()
 	while (true)
 	{
 		self waittill("weapon_fired");
-		ammoWeapon=self getCurrentWeapon();
+		ammoWeapon = self getCurrentWeapon();
 
 		if (ammoWeapon != self.secondaryWeapon)
 		{
