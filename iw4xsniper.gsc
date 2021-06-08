@@ -61,7 +61,11 @@ onPlayerSpawned()
 doDvars()
 {	
 	// Disable melee
-	setDvar("player_meleeRange", 0); 
+	setDvar("player_meleeRange", 0);
+
+	// /weather clear
+	self setClientDvar("r_fog", 0);
+	self setClientDvar("fx_enable", 0);
 
 	// Replace not allowed weapons etc during class selection grace period, 5*3.5=17.5
 	for (count=0;count<15;count++)
