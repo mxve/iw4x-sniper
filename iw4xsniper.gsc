@@ -85,16 +85,15 @@ doDvars()
 		if (	
 				weapon!= self.secondaryWeapon &&
 		   		(
-					isSubStr(weapon,"thermal") ||
-		   			isSubStr(weapon,"heartbeat") ||
-					isSubStr(weapon,"acog") ||
-					isSubStr(weapon,"silencer") ||
-					isSubStr(weapon,"riotshield") ||
+					isSubStr(weapon, "thermal") ||
+		   			isSubStr(weapon, "heartbeat") ||
+					isSubStr(weapon, "acog") ||
+					isSubStr(weapon, "silencer") ||
+					isSubStr(weapon, "riotshield") ||
 					!(
-						isSubStr(weapon,"cheytac") ||
-						isSubStr(weapon,"barrett") ||
-						isSubStr(weapon,"m40a3") ||
-						isSubStr(weapon,"throwingknife")
+						isSubStr(weapon, "cheytac") ||
+						isSubStr(weapon, "m40a3") ||
+						isSubStr(weapon, "throwingknife")
 					)
 				)
 			)

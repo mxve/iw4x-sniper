@@ -14,7 +14,6 @@
 - Ammo replenish
 - Allowed weapons
   - Intervention (cheytac)
-  - Barrett
   - M40A3
 - Disallowed attachments
   - Thermal
